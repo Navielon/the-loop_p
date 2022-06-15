@@ -61,7 +61,7 @@ body {
   color: #212121;
   line-height: 17px;
   letter-spacing: 0.03em;
-  margin: 0px;
+  margin: 0;
   padding: 0;
   transition: 0.3s;
 }
@@ -173,11 +173,6 @@ body {
   position: relative;
 }
 
-.box img {
-  margin-left: 15px;
-  padding-bottom: 133px;
-}
-
 .box__price {
   position: absolute;
   right: 0;
@@ -207,6 +202,11 @@ body {
   color: #D84033;
   padding-top: 15px;
   margin: 0;
+}
+
+.box img {
+  margin-left: 15px;
+  padding-bottom: 133px;
 }
 
 .bg__dark {
@@ -366,7 +366,6 @@ body {
 
 .models__text {
   font-weight: 600;
-  font-size: 14px;
   line-height: 17px;
 }
 
@@ -436,7 +435,6 @@ footer {
 }
 
 .footer__logo-title {
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -494,7 +492,6 @@ footer {
 
 .footer__info-text {
   font-weight: 400;
-  font-size: 14px;
   line-height: 22px;
   color: #212121;
 }
