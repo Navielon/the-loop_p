@@ -1,6 +1,7 @@
-//========================================================================================================================================================
+//======================= Подключение шрифтов =================================================================================================================================
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
-//========================================================================================================================================================
+//*========================================================================================================================================================
+//========================= Шаблоны цветов ===============================================================================================================================
 $bg: #F9F6F1;
 $dark: #000;
 $sdark: #212121;
@@ -9,471 +10,538 @@ $white: #fff;
 $btn: #D7B399;
 $gray: #CBCFD4;
 //========================================================================================================================================================
-.bg{
-    background-color: $bg;
+//============================= Содержимое сайта ===========================================================================================================================
+// Обращение к тегу цвета фона
+.bg{    
+    background-color: $bg;// Цвет фона
 }
+// Обращение к видимому контейнеру сайта
 body{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; // Установка семейства шрифта
+    font-weight: 500; // Ширина текста
+    font-size: 14px; // Размер текста
 }
+// Обращение к главному ограничивающему контейнеру
 .container{
-    max-width: 1110px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 1110px; // Максимальная ширина
+    margin: 0 auto; // Выравнивание по центру
+    padding: 0 15px; // Внутренний отступ 30px
 }
-
+// Обращение к шапке 
 .header{
-    padding-top: 61px;
-    padding-bottom: 126px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-top: 61px; // Внутренний отступ сверху
+    padding-bottom: 126px; // Внутренний отступ снизу
+    display: flex; // Элементы становятся блочными и выстраиваются согласно флекс модели
+    justify-content: space-between; // Распределение элементов по контейнеру. Первый и последний элемент прилипают к бокам контейнера
+    align-items: center; // Выравнивание элементов по центру
 }
+// Обращение к навигации
 .nav{
-    display: flex;
-    list-style-type: none;
-    margin-right: 25px;
-    padding: 0;
+    display: flex; // Элементы становятся блочными и выстраиваются согласно флекс модели
+    list-style-type: none; // Обнуление стандартных точек у списка
+    margin-right: 25px; // Внешний отступ справа
+    padding: 0; // Обнуление внутренних отступов
+    // Обращение к контейнеру списка
     &__item{
-        margin: 0 22.5px;
+        margin: 0 22.5px; // Внешний отступ справа и слева
     }
-    &:hover{
-       
-    }
+    // Обращение к ссылкам
     &__link{
-        text-decoration: none;
-        color: $sdark;
-        line-height: 17px;
-        letter-spacing: 0.03em;
-        transition: 0.3s;
+        text-decoration: none; // Обнуление нижнего подчёркивания
+        color: $sdark; // Цвет текста
+        line-height: 17px; // Межстрочный интервал
+        letter-spacing: 0.03em; // Межсимвольный интервал
+        transition: 0.3s; // Плавность анимации
+        // Эффект наведения (Псевдо-элемент)
         &:hover{
-            text-decoration: underline;
+            text-decoration: underline; // Нижнее подчёркивание
         }
     }
 }
-
+// Обращение к контейнеру корзины
 .cart{
-    background-image: url(../img/cart.svg);
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    padding-left: 45px;
+    background-image: url(../img/cart.svg); // Подгрузка иконки
+    display: block; // Элемент становится блочным и видимым
+    width: 30px; // Ширина
+    height: 30px; // Высота
+    background-repeat: no-repeat; // Обнуление повторения у иконки
+    background-position: 0 center; // Позиционирование по центру
+    padding-left: 45px; // Внутренний отступ слева
+    // Обращение к ссылкам
     &__li{
-        text-decoration: none;
-        color: $sdark;
-        line-height: 17px;
-        letter-spacing: 0.03em;
-        margin: 0px;
-        padding: 0;
-        transition: 0.3s;
+        text-decoration: none; // Обнуление нижнего подчёркивания
+        color: $sdark; // Цвет текста
+        line-height: 17px; // Межстрочный интервал
+        letter-spacing: 0.03em; // Межсимвольный интервал
+        margin: 0; // Обнуление внешних отступов
+        padding: 0; // Обнуление внутренних отступов
+        transition: 0.3s; // Плавность анимации
+        // Эффект наведения (Псевдо-элемент)
         &:hover{
-            text-decoration: underline;
+            text-decoration: underline; // Нижнее подчёркивание
         }
     }
+    // Обращение к корзине
     &__count{
-        background-image: url(../img/cart__arrow.svg);
-        background-repeat: no-repeat;
-        background-position: 0 center;
-
-        color: $white;
-        font-size: 11px;
-        font-weight: 700px;
-        padding: 10px 24px;
-        display: block;
-        text-align: center;
-        transition: 0.3s ease;
+        background-image: url(../img/cart__arrow.svg); // Подгрузка иконки
+        background-repeat: no-repeat; // Обнуление повторения иконки
+        background-position: 0 center;  // Позиционирование по центру
+        color: $white; // Цвет текста 
+        font-size: 11px; // Размер шрифта
+        font-weight: 700px; // Ширина шрифта
+        padding: 10px 24px; // Внутренний отступ по вертикали и горизонтали
+        display: block; // Элемент становится блочным и видимым
+        text-align: center; // Выравнивание текста по центру
+        transition: 0.3s ease; // Плавность анимации
     }
+    // Эффект наведения
     &:hover{
-        transform: scale(1.1);
-        cursor: pointer;
+        transform: scale(1.1); // Визуальное увелечение элемента
+        cursor: pointer; // Курсор становится ручкой
     }
 }
-
+ // Обращение контейнеру логотипа
 .logo{
-    padding-left: 95px;
-    margin-right: 30px;
+    padding-left: 95px; // Внутренний отступ слева
+    margin-right: 30px; // Внутренний отступ справа
+    // Обращение к заголовку
     &__title{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        position: relative;
+        font-weight: 700; // Ширина шрифта
+        font-size: 24px; // Размер шрифта
+        line-height: 29px; // Межстрочный интервал
+        letter-spacing: 0.05em; // Межсимвольный интервал
+        text-transform: uppercase; // Переводит текст в верхний регистр
+        position: relative; // Элемент становится родителем
+        // Псевдо-элемент "Перед"
         &::before{
-        content: '';
-        background-image: url(../img/logo.svg);
-        display: block;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: -60px;
-        top: -5px;
+        content: ''; // Обязательное свойство для псевдо-элемента
+        background-image: url(../img/logo.svg); // Подгрузка иконки
+        display: block; // Элемент становится блочным и видимым
+        width: 40px; // Ширина
+        height: 40px; // Высота
+        position: absolute; // Позиционирование относительно родителя
+        left: -60px; // Позиционирование по горизонтали
+        top: -5px; // Позиционирование по вертикали
         }
     }
 }
-
+//*========================================================================================================================================================
+//?========================================================================================================================================================
+//============ Обращение к блоку акций ============================================================================================================================================
+// Обращение к контейнеру фона 
 .bg__sale{
-    background-color: $bg;
-
+    background-color: $bg; // Цвет фона
 }
+// Обращение к контейнеру
 .main{
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 25px;
+    display: flex; // Элементы выстраиваются согласно флекс-модели, при этом становясь блочными
+    justify-content: space-between; // Распределение элементов по контейнеру. Первый и последний элемент прилипают к бокам контейнера
+    margin: 0; // Обнуление внешних отступов
+    padding-left: 25px; // Внутренний отступ слева
 }
+// Обращение к контейнеру текста
 .sale{
-    flex:0 0 50%;
+    flex: 0 0 50%; // Ширина
+    // Обращение к тексту
     &__description{
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 37px;
-        letter-spacing: 0.02em;
-        color: $dark;
-        margin: 0;
-        padding-top: 20px;
+        font-weight: 400; // Ширина текста
+        font-size: 30px; // Размер шрифта
+        line-height: 37px; // Межстрочный интервал
+        letter-spacing: 0.02em; // Межсимвольный интервал
+        color: $dark; // Цвет текста
+        margin: 0; // Обнуление внешних отступов
+        padding-top: 20px; // Внутренний отступ сверху
     }
+    // Обращение к заголовку
     &__title{
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 67px;
-        letter-spacing: 0.04em;
-        color: $dark;
-        margin: 0;
-        padding-top: 25px;
-        margin-bottom: 55px;
-        text-transform: uppercase;
+        font-weight: 700;  // Ширина шрифта
+        font-size: 55px; // Размер шрифта
+        line-height: 67px; // Межстрочный интервал
+        letter-spacing: 0.04em; // Межсимвольный интервал
+        color: $dark; // Цвет текста
+        margin: 0; // Обнуление внешних отступов
+        padding-top: 25px; // Внутренний отступ сверху
+        margin-bottom: 55px; // Внешний отступ снизу
+        text-transform: uppercase; // Переводит текст в верхний регистр
     }
+    // Обращнение к ссылкам
     &__link{
-        text-decoration: none;
-        color: $white;
-        background-color: $btn;
-        padding: 18px 30px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        transition: 0.35s;
+        text-decoration: none; // Обнуление нижнего подчёркивания
+        color: $white; // Цвет текста
+        background-color: $btn; // Цвет фона
+        padding: 18px 30px; // Внутренний отступ по вертикали и горизонтали
+        font-weight: 400; // Ширина шрифта
+        font-size: 16px; // Размер шрифта
+        line-height: 20px; // Межстрочный интервал
+        letter-spacing: 0.03em; // Межсимвольный интервал
+        text-transform: uppercase; // Переводит текст в верхний регистр
+        transition: 0.35s; // Плавность анимации
+        // Эффект наведения
         &:hover{
-            background-color: $sdark;
-            box-shadow: 0px 1px 15px $dark;
-            font-weight: 800;
+            background-color: $sdark; // Цвет фона
+            box-shadow: 0px 1px 15px $dark; // Тень вокруг объекта
+            font-weight: 800; // Ширина шрифта
         }
     }
-    
 }
-
+// Обращение к контейнеру акции
 .box{
-    img{
-        margin-left: 15px;
-        padding-bottom: 133px;
-    }
-    position: relative;
+    position: relative; // Элемент становится родителем
+    // Обращение контейнеру цены
     &__price{
-        position: absolute;
-        right: 0;
-        top: -20px;
-        text-align: right;
+        position: absolute; // Позиционирование относительно родителя
+        right: 0; // Выравнивание по правому краю
+        top: -20px; // Позиционирование по вертикали
+        text-align: right; // Выравнивание текста по центру
+        // Обращение к контейнеру старой цены
         &-old{
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            text-align: right;
-            letter-spacing: 0.05em;
-            text-decoration-line: line-through;
-            text-transform: uppercase;
-            margin: 0;
-            padding-top: 45px;
+            font-weight: 700; // Ширина шрифта
+            font-size: 24px; // Размер шрифта
+            line-height: 29px; // Межстрочный интервал
+            text-align: right; // Выравнивние текста по правой стороне
+            letter-spacing: 0.05em; // Межсимвольный интервал
+            text-decoration-line: line-through; // Перечёркивание текста
+            text-transform: uppercase; // Переводит текст в верхний регистр
+            margin: 0; // Обнуление внешних отступов
+            padding-top: 45px; // Внутренний отступ сверху
         }
+        // Обращение к контейнеру новой цены
         &-new{
-            font-weight: 700;
-            font-size: 42px;
-            line-height: 51px;
-            text-align: right;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            color: $red;
-            padding-top: 15px;
-            margin: 0;
+            font-weight: 700; // Ширина шрифта
+            font-size: 42px; // Размер шрифта
+            line-height: 51px; // Межстрочный интервал
+            text-align: right; // Выравнивание текста по правой стороне
+            letter-spacing: 0.02em; // Межсимвольный интервал
+            text-transform: uppercase; // Переводит текст в верхний регистр
+            color: $red; // Цвет текста
+            padding-top: 15px; // Внешний отступ сверху
+            margin: 0; // Обнуление внешних отступов
         }
     }
+        // Обращение к картинке
+        img{
+        margin-left: 15px; // Внешний отступ слева
+        padding-bottom: 133px; // Внутренний отступ снизу
+    }
 }
-
+//*========================================================================================================================================================
+//?========================================================================================================================================================
+//================ Контейнер выгодных предложений ========================================================================================================================================
+// Обращение к контейнеру фона
 .bg__dark{
-    background-color: $sdark;
-    text-align: center;
+    background-color: $sdark; // Цвет фона
+    text-align: center; // Выравнивание текста по центру
+    // Обращение к первой части текста
     span{
-        font-weight: 700;
-        text-transform: uppercase;
+        font-weight: 700; // Ширина шрифта
+        text-transform: uppercase; // Переводит текст в верхний регистр
     }
+    // Обращение к заголовку
     &-title{
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 37px;
-        letter-spacing: 0.02em;
-        color: $white;
-        padding-top: 80px;
-        margin: 0;
-        text-transform: uppercase;
+        font-weight: 300; // Ширина шрифта
+        font-size: 30px; // Размер шрифта
+        line-height: 37px; // Межстрочный интервал
+        letter-spacing: 0.02em; // Межсимвольный интервал
+        color: $white; // Цвет текста
+        padding-top: 80px; // Внутренний отступ сверху
+        margin: 0; // Обнуление внешних отступов
+        text-transform: uppercase; // Переводит текст в верхний регистра
     }
+    // Обращение к нижней части предложения
     &-text{
-        font-weight: 300;
-        font-size: 21px;
-        line-height: 26px;
-        color: $white;
-        margin: 0;
-        padding-top: 23px;
-        padding-bottom: 70px;
+        font-weight: 300; // Ширина шрифта
+        font-size: 21px; // Размер шрифта
+        line-height: 26px; // Межстрочный интервал
+        color: $white; // Цвет текста
+        margin: 0; // Обнуление внешних отступов
+        padding-top: 23px; // Внутренний отступ сверху
+        padding-bottom: 70px; // Внутренний отступ снизу
     }
 }
-
+//*========================================================================================================================================================
+//?========================================================================================================================================================
+//============= Контейнер коллекций ===========================================================================================================================================
+// Обращение к контейнеру фона
 .bg__collection{
-    background-color: $bg;
+    background-color: $bg; // Цвет фона
 }
+// Обращение к контейнеру коллекций
 .collection{
-    display: flex;
-    justify-content: space-between;
+    display: flex; // Выстраивает элементы согласно флекс-модели, делая их блочными
+    justify-content: space-between; // Равномерно распределяет элементы по ширине контейнера. Первый и последний элемент прилипают к краям контейнера
+    // Обращение к контейнеру мужчин
     &__man{
-        background-image: url(../img/man_collection.png);
-        background-repeat: no-repeat;
-        background-size: 190px 171px;
-        background-position: right bottom;
+        background-image: url(../img/man_collection.png); // Подгрузка картинки
+        background-repeat: no-repeat; // Обнуление повторения изображения
+        background-size: 190px 171px; // Размер картинки
+        background-position: right bottom; // Позиционирование снизу правой стороны контейнера
     }
+    // Обращение к контейнеру женщин
     &__woman{
-        background-image: url(../img/woman_collection.png);
-        background-repeat: no-repeat;
-        background-size: 190px 171px;
-        background-position: right bottom;
+        background-image: url(../img/woman_collection.png);  // Подгрузка картинки
+        background-repeat: no-repeat; // Обнуление повторения изображения
+        background-size: 190px 171px; // Размер изображения
+        background-position: right bottom; // Позиционирование снизу правой стороны контейнера
     }
+    // Обращение к контейнеру обоих коллекций
     &__item{
-        flex: 0 0 50%;
-        padding: 50px 0;
+        flex: 0 0 50%; // Ширина между контейнерами
+        padding: 50px 0; // Внутренний отступ по вертикали
     }
+    // Обращение к заголовку
     &__title{
-        padding-top: 10px;
-        padding-left: 35px;
-        margin: 0;
-        text-transform: uppercase;
+        padding-top: 10px; // Внутренний отступ сверху
+        padding-left: 35px; // Внутренний отступ слева
+        margin: 0; // Обнуление внешних отступов
+        text-transform: uppercase; // Переводит текст в верхний регистр
+        // Обращение к первой части заголовка
         span{
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 29px;
-            letter-spacing: 0.076em;
-            color: $dark;
-            
+            font-weight: 500; // Ширина шрифта
+            font-size: 24px; // Размер шрифта
+            line-height: 29px; // Межстрочный интервал
+            letter-spacing: 0.076em; // Межсимвольный интервал
+            color: $dark; // Цвет текста
         }
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-        letter-spacing: 0.03em;
-        color: $dark;
+        font-weight: 300; // Щирина текста
+        font-size: 24px; // Размер шрифта
+        line-height: 29px; // Межстрочный интервал
+        letter-spacing: 0.03em; // Межсимвольный интервал
+        color: $dark; // Цвет текста
     }
+    // Обращение к тексту
     &__text{
-        padding-left: 36px;
-        margin: 0;
-        padding-top: 25px;
-        margin-bottom: 45px;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 20px;
+        padding-left: 36px; // Внутренний отступ слева
+        margin: 0; // Обнуление внеших отступов
+        padding-top: 25px; // Внутренний отступ сверху
+        margin-bottom: 45px; // Внешний отступ снизу
+        font-weight: 300; // Ширина шрифта
+        font-size: 16px; // Размер шрифта
+        line-height: 20px; // Межстрочный интервал
     }
+    // Обращение к ссылкам
     &__link{
-        background-color: $btn;
-        margin-left: 36px;
-        padding: 8px 30px;
-        transition: 0.35s;
+        background-color: $btn; // Цвет фона
+        margin-left: 36px; // Внешний отступ слева
+        padding: 8px 30px; // Внутренний отступ по вертикали и горизонтали
+        transition: 0.35s; // Плавность анимации
+         // Эффект наведения
         &:hover{
-            background-color: $sdark;
-            box-shadow: 0px 1px 10px $dark;
-            font-weight: 800;
+            background-color: $sdark; // Цвет фона
+            box-shadow: 0px 1px 10px $dark; // Тень вокруг объекта
+            font-weight: 800; // Ширина шрифта
         }
     }
 }
-
+//*========================================================================================================================================================
+//?========================================================================================================================================================
+//============== Контейнер новых моделей==========================================================================================================================================
+// Обращение к контейнеру фона
 .bg__models{
-    background-color: $white;
+    background-color: $white; // Цвет фона
 }
+// Обращение к контейнеру моделей
 .models{
+    // Обращение к контейнеру модели
     &__item{
-        flex: 0 0 24%;
-        position: relative;
-        text-align: center;
+        flex: 0 0 24%; // Ширина 
+        position: relative; // Элемент становится родителем
+        text-align: center; // Выравнивание текста по центру
+        // Псевдо-элементы "Перед", "После"
         &:before, &:after{
-            content: '';
-            display: block;
-            width: 100%;
-            height: 25px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            opacity: 0;
-            transition: 0.3s;
+            content: ''; // Обяззательное свойство для псевдо-элемента
+            display: block; // Элемент становится блочным и видимым
+            width: 100%; // Ширина 100% - расчитывается на основе родителя
+            height: 25px; // Высота
+            background-size: cover; // Растягивание изображения по контейнеру
+            background-repeat: no-repeat; // Обнуление повторений изображений
+            opacity: 0; // Полная прозрачность
+            transition: 0.3s; // Плавность анимации
         }
+        // Псевдо-элемент "Перед"
         &:before{
-            background-image: url(../img/item__top.svg);
+            background-image: url(../img/item__top.svg); // Подключение иконки
         }
+        // Псевдо-элеемент "После"
         &:after{
-            background-image: url(../img/item__bottom.svg);
+            background-image: url(../img/item__bottom.svg); // Подключение иконки
         }
+        // Эффект наведения для before
         &:hover::before{
-            opacity: 1;
+            opacity: 1; // Полная непрозрачность
         }
+        // Эффект наведения для after
         &:hover::after{
-            opacity: 1;
+            opacity: 1; // Полная непрозрачность
         }
-        
     }
+    // Обращение к контейнеру моделей
     &__product{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 100px;
+        display: flex; // Элементы выстраиваются согласно флекс-модели и становятся блочными
+        justify-content: space-between; // Равномерно распределяет элементы по контейнеру, первый и последний элемент прижимаются к краям контейнера
+        margin-bottom: 100px; // Внешний отступ снизу
     }
+    // Обращение к заголовку
     &__title{
-        padding-top: 150px;
-        padding-bottom: 100px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 44px;
-        color: $dark;
-        text-align: center;
+        padding-top: 150px; // Внутренний отступ сверху
+        padding-bottom: 100px; // Внутренний отступ снизу
+        font-weight: 700; // Ширина шрифта
+        font-size: 36px; // Размер шрифта
+        line-height: 44px; // Межстрочный интервал
+        color: $dark; // Цвет текста
+        text-align: center; // Выравнивание текста по центру
     }
+    // ОбраЩение к тексту
     &__text{
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        
+        font-weight: 600; // Ширина шрифта
+        line-height: 17px; // Межстрочный интервал
     }
+    // Обращение к цене
     &__price{
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        display: block;
-        color: $btn;
-        transition: 0.3s;
+        font-weight: 700; // Ширина шрифта
+        font-size: 18px; // Размер шрифта
+        line-height: 22px; // Межстрочный интервал
+        display: block; // Элемент становится блочным и видимым
+        color: $btn; // Цвет текста
+        transition: 0.3s; // Плавность анимации
+        // Эффект наведения мыши
         &:hover{
-            text-shadow: 0px 1px 1px #f3bc25;
+            text-shadow: 0px 1px 1px #f3bc25; // Тень текста
         }
     }
+    // Обращение к ссылке
     &__link{
-        background-color: $btn;
-        text-decoration: none;
-        color: $white;
-        padding: 15px 20px;
-        display: block;
-        text-align: center;
-        max-width:  180px;
-        margin: 0 auto;
-        margin-bottom: 152px;
-        transition: 0.3s;
+        background-color: $btn; // Цвет фона
+        text-decoration: none; // Обнуление нижнего подчёркивания
+        color: $white; // Цвет текста
+        padding: 15px 20px; // Внутренний отступ
+        display: block; // Элемент становится блочным и видимым
+        text-align: center; // Выравнивание текста по центру
+        max-width:  180px; // Максимальная ширина
+        margin: 0 auto; // Выравнивание по центру
+        margin-bottom: 152px; // Внешний отступ снизу
+        transition: 0.3s; // Плавность анимации
+        // Обращение к тексту внутри ссылки
         span{
-            padding-right: 9px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
+            padding-right: 9px; // Внутренний отступ справа
+            font-weight: 400; // Ширина шрифта
+            font-size: 16px; // Размер шрифта
+            line-height: 20px; // Межстрочный интервал
+            letter-spacing: 0.03em; // Межсимвольный интервал
+            text-transform: uppercase; // Переводит текст в верхний регистр
         }
+        // Эффект наведения мыши
         &:hover{
-            transform: scale(1.1);
-            box-shadow: 0px 1px 10px $dark;
-            background-color: $dark;
-            font-weight: 800;
+            transform: scale(1.1); // Визуально увеличивает элемент
+            box-shadow: 0px 1px 10px $dark; // Внешняя тень элемента
+            background-color: $dark; // Цвет фона
+            font-weight: 800; // Ширина шрифта
         }
     }
+    // Обращение к ссылкам цены
     &__l{
-        text-decoration: none;
+        text-decoration: none; // Обнуление нижнего подчёркивания
     }
 }
-
+//*========================================================================================================================================================
+//?========================================================================================================================================================
+//=================== Подвал сайта=====================================================================================================================================
+// Обращение к контейнеру подвала (фон)
 footer{
-    background-color: $sdark;
+    background-color: $sdark; // Цвет фона
 }
+// Обращение к контейнеру подвала
 .footer{
-    display: flex;
+    display: flex; // Элементы выстраиваются согласно флекс-модели и становятся блочными
+    // Обращение к меню навигации подвала
     &__nav{
-        display: flex;
-        justify-content: space-between;
-        flex: 0 0 60%;
-        padding-left: 223px;
-
+        display: flex; // Элементы выстраиваются согласно флекс-модели и становятся блочными
+        justify-content: space-between; // Равномерно распределяет элемент по контейнеру (первый и последний прилипают к краям контейнера)
+        flex: 0 0 60%; // Ширина
+        padding-left: 223px; // Внутренний отступ слева
     }
+    // Обращение к контейнеру логотипа
     &__logo{
-        max-width: 150px;
+        max-width: 150px; // Максимальная ширина
+        // Обращение к заголовку
         &-title{
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: $white;
-            position: relative;
-            margin: 0;
-            padding: 0;
-            padding-top: 110px;
-            padding-bottom: 130px;
-            max-width: 150px;
+            font-weight: 700; // Ширина шрифта
+            font-size: 24px; // Размер шрифта
+            line-height: 29px; // Межстрочный интервал
+            letter-spacing: 0.05em; // Межсимвольный интервал
+            text-transform: uppercase; // Переводит текст в верхний регистр
+            color: $white; // Цвет текста
+            position: relative; // Элемент становится родителем
+            margin: 0; // Обнуление внешних отступов
+            padding: 0; // Обнуление внутренних отступов
+            padding-top: 110px; // Внутренний отступ сверху
+            padding-bottom: 130px; // Внутренний отступ снизу
+            max-width: 150px; // Максимальная ширина
+            // Псевдо-элемент "Перед"
             &::before{
-            content: '';
-            background-image: url(../img/logo.svg);
-            display: block;
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            left: -60px;
-            top: 100px;
+            content: ''; // Обязательное свойство для псевдо элемента (отвечает за вывод содержимого)
+            background-image: url(../img/logo.svg); // Подгрузка логотипа
+            display: block; // Элемент становится блочным и видимым
+            width: 40px; // Ширина
+            height: 40px; // Высота
+            position: absolute; // Позиционирование относительно родителя
+            left: -60px; // Позиционирование по горизонтали
+            top: 100px; // Позиционирование по вертикали
             }
         }
     }
+    // Обращение к li
     &__item{
-        list-style-type: none;
-        padding: 5px 0;
-
+        list-style-type: none; // Обнуление стандартных точек списка
+        padding: 5px 0; // Внутренний отступ сверху и снизу
     }
+    // Обращение к спискам
     &__list{
-        padding-top: 50px;
+        padding-top: 50px; // Внутренний отступ сверху
     }
+    // Обращение к ссылкам
     &__link{
-        color: $gray;
-        text-decoration: none;
-        transition: 0.3s;
+        color: $gray; // Цвет текста
+        text-decoration: none; // Обнуление нижнего подчёркивания
+        transition: 0.3s; // Плавность анимации
+        // Эффект наведения мыши
         &:hover{
-            text-decoration: underline;
+            text-decoration: underline; // Нижнее подчёркивание
         }
     }
-    
+    // Обращение к заголовкам списков
     &__title{
-        color: $white;
-        list-style-type: none;
-        margin-bottom: 15px;
+        color: $white; // Цвет текста
+        list-style-type: none; // Обнуление стандартных точек списка
+        margin-bottom: 15px; // Внешний отступ снизу
     }
+    // Обращение к нижнему контейнеру подвала
     &__info{
-        display: flex;
-        justify-content: space-between;
+        display: flex; // Элементы выстраиваются согласно флекс модели и становятся блочными
+        justify-content: space-between; // Раскидывает элемент по контейнеру равномерно
+        // Обращение к тексту
         &-text{
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 22px;
-            color: $sdark
+            font-weight: 400; // Ширина текста
+            line-height: 22px; // Межстрочный интервал
+            color: $sdark; // Цвет текста
         }
+        // Обращение к ссылке
         &-link{
-            padding-top: 15px;
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 22px;
-            color: $sdark;
-            transition: 0.3s;
+            padding-top: 15px; // Внутренний отступ сверху
+            text-decoration: none; // Обнуление нижнего подчёркивания
+            font-weight: 400; // Ширина шрифта
+            font-size: 14px; // Размер шрифта
+            line-height: 22px; // Межстрочный интервал
+            color: $sdark; // Цвет текста
+            transition: 0.3s; // Плавность анимации
+            // Эффект наведения мыши
             &:hover{
-                text-decoration: underline;
+                text-decoration: underline; // Нижнее подчёркивание
             }
         }
     }
 }
-
+// Обращене к контейнеру фона
 .bg__footer{
-    background-color: $white;
+    background-color: $white; // Цвет фона
 }
+//*========================================================================================================================================================
